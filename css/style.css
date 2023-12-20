@@ -149,7 +149,9 @@ li {
         align-items: center;
 
     }
-
+    #first_page {
+        background-image: url(../assets/background_mboile.png);
+    }
     #sec_page {
         text-align: justify;
         margin: 15% 2%;
