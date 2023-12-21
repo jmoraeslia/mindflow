@@ -27,13 +27,6 @@ li {
 
 body {
     background-color: #0C0B0D;
-}
-
-header {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
 }
 
@@ -63,73 +56,81 @@ main {
     color: #eee;
 }
 
-#logo {
+.logo {
     position: absolute;
     top: 0px;
     right: 0px;
-    filter: contrast(1000%);
+   
 }
 
 .grid-container {
+    max-width: 90vw;
     margin: 10% 0 0 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    
     grid-template-areas:
         "a b"
-        "c d"
-        "e e"
+        "a b"
     ;
+    justify-items: center;
+   gap: 5px;
     color: #eee;
-    grid-auto-flow: dense;
-
 }
-
-.grid-container img {
-    max-width: 100%;
+.one img, .two img{
+    width: 100%;
     max-height: 100%;
     object-fit: cover;
+    margin: 0 0 5px 0;
+   
 }
 
 .one {
+    display: flex;
+    flex-direction: column;
+        justify-content: space-between;
     grid-area: a;
 }
 
 .two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-area: b;
 }
 
-.three {
-    grid-area: c;
-}
-
-.four {
-    grid-area: d;
-}
-
-.five {
-    grid-area: e;
-}
-
 .pratical {
+    width: 80vw;
     display: flex;
-    /* background-color: rgb(43, 112, 114); */
-
+    flex-direction: column;
+    margin: 10% 0;
 }
 
 .pratical div {
     margin: 30px 15px;
     padding: 30px;
-    background-color: rgb(245, 245, 245);
+    background-color:  #eee;
     color: #0C0B0D;
+    position: relative;
 
 }
 
 .pratical h3 {
     text-align: left;
     line-height: 45px;
-    margin: 0 0 3% 0;
+    font-size: 22px;
+    font-weight: 100;
 
+}
+.pratical h4 {
+    text-align: left;
+}
+.pratical img:hover {
+  cursor: pointer;
+}
+.pratical ul {
+    display: none;
+    margin: 30px 0 0 0;
 }
 
 #first_page {
@@ -147,11 +148,9 @@ main {
 }
 
 
-
-
 #sec_page {
+    margin: 8% 4%;
     text-align: justify;
-    margin: 8% 2%;
     display: flex;
     flex-direction: column;
 }
@@ -169,21 +168,44 @@ main {
     align-items: center;
     justify-content: center;
     height: fit-content;
+   
 }
 
 h3 {
     font-size: 40px;
 }
-
+h4 {
+    font-size: 20px;
+}
+.pratical {
+    align-self: center;
+    font-size: 16px;
+}
 input[type="button"] {
     border: 1px solid rgba(245, 245, 245);
     width: fit-content;
     padding: 5px 15px;
-    margin: 15px 0 0 0;
+    margin: 15px 0;
     background-color: transparent;
 
     color: #eee;
     font-size: 20px;
+}
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 4% ;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #eee;
+    color: #0C0B0D;
+}
+.display div p{
+    max-width: 85vw;
+    font-size: 20px;
+    margin: 20px 0 0 0;
 }
 
 input[type="button"]:hover {
@@ -201,9 +223,8 @@ input[type="button"]:hover {
 
 .image {
     align-self: center;
+    margin: 10px 30px;
 }
-
-
 
 footer {
     display: flex;
@@ -211,12 +232,14 @@ footer {
     justify-content: center;
     bottom: 10px;
     font-size: 12px;
+    color: #eee;
 }
 
 @media screen and (max-width: 1000px) {
     .row {
         flex-direction: column;
         align-items: center;
+        
 
     }
 
@@ -237,11 +260,13 @@ footer {
     }
 
     .grid-container {
+        max-width: 90%;
         display: flex;
         flex-direction: column;
         padding: 3%;
         justify-content: center;
         align-self: center;
+        gap: 0;
     }
 
 }
@@ -250,12 +275,14 @@ footer {
 
 
     .pratical h3 {
-        font-size: 36px;
-        line-height: 30px;
-        margin: 0 0 6% 0;
+        line-height: 20px;
     }
 
     .pratical ul li {
+        font-size: 16px;
+    }
+    .display div p{
+        max-width: 85vw;
         font-size: 16px;
     }
 
